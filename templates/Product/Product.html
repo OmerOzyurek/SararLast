@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>SARAR YAPI | ANKARAR</title>
+
+    {% include 'Base/Header.html' %}
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    <style>
+        html,
+        body {
+          
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper {
+            
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .swiper-slide {
+     
+            margin-top: 5%;
+            background-position: center;
+            background-size: cover;
+            width: 250px;
+            height: 500px;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+        }
+
+        h4{
+            margin-top: 70px;
+            text-align: center;
+            margin-bottom: -20px;
+        }
+        h6{
+         
+            text-align: center;
+            font-size: 19px;
+        }
+
+    </style>
+   
+
+</head>
+
+<body>
+
+    {% include 'Base/NavBar.html' %}
+
+    <div class="swiper mySwiper">
+        <h4> ÜRÜN KATEGORİLERİ </h4>
+        <div class="swiper-wrapper">
+           
+            <div class="swiper-slide">
+                <a href="{% url 'GaleryPage'%}"><img src="{% static 'img\Door\mebran2.jpg'%}" width="250px" height="500px" /></a>
+                <h6>Pvc Mebran Kapı</h6>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'GaleryPage'%}"><img src="{% static 'img\Door\mebran2.jpg'%}" width="250px" height="500px" /></a>
+                <h6>ÇELİK KAPI</h6>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'GaleryPage'%}"><img src="{% static 'img\Door\mebran2.jpg'%}" width="250px" height="500px" /></a>
+                <h6>MUTFAK MOBİLYALARI</h6>
+            </div>
+            <div class="swiper-slide">
+                <a href="{% url 'GaleryPage'%}"><img src="{% static 'img\Door\mebran2.jpg'%}" width="250px" height="500px" /></a>
+                <h6>DOLAP ÜRÜNLERİ</h6>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    {% include 'Base/Footer.html' %}
+    <!-- End footer Area -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+</body>
+
+</html>
