@@ -1,25 +1,29 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
 
-   	<!-- Start Header Area -->
-	<header class="header_area sticky-header" >
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+
+<body>
+
+
+	<!-- Start Header Area -->
+	<header class="header_area sticky-header">
 		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light main_box" style="opacity: 0.9;background-color:rgb(119, 0, 255);border-radius:10px;margin-top:-20px;" >
+			<nav class="navbar navbar-expand-lg navbar-ligth main_box"
+				style="background-color: rgba(0, 0, 0, 0.733);border-bottom:2px solid red ;border-top:2px solid red;">
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" style="margin-top: 10px;" href="{% url 'HomePage'%}"><img src="{% static 'img/Door/sararlogo.png'%}" width="135px" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<a class="navbar-brand logo_h" href="{% url 'HomePage' %}"><img
+							src="{% static 'img/Door/sararlogo.png' %}" width="145px" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -27,19 +31,26 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="{% url 'HomePage' %}">Ana Sayfa</a></li>
-							<li class="nav-item active"><a class="nav-link" href="{% url 'ProductPage' %}">Ürünler</a></li>
-							<li class="nav-item active"><a class="nav-link" href="{% url 'GaleryPage' %}">Galeri</a></li>
-							<!-- <li class="nav-item active"><a class="nav-link" href="{% url 'ColorsPage' %}">Renkler</a></li> -->
-							<li class="nav-item active"><a class="nav-link" href="{% url 'AboutPage' %}">Hakkımızda</a></li>
-							<li class="nav-item active"><a class="nav-link" href="{% url 'ContactPage' %}">İletişim</a></li>
+							<li class="nav-item "><a class="nav-link" style="color: white;"
+									href="{% url 'HomePage' %}">ANA SAYFA</a></li>
 
-							
-							
+							<li class="nav-item"><a class="nav-link" style="color: white;"
+									href="{% url 'ProductPage' %}">ÜRÜNLERİMİZ</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: white;"
+									href="{% url 'GaleryPage' %}">GALERİ</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: white;"
+									href="{% url 'AboutPage' %}">HAKKIMIZDA</a></li>
+							<li class="nav-item"><a class="nav-link" style="color: white;"
+									href="{% url 'ContactPage' %}">İLETİŞİM</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
+							<li class="nav-item"><a href="#" class="cart"><span style="color: rgb(255, 0, 221);"
+										class="fa fa-instagram"></span></a></li>
+										<li class="nav-item"><a href="#" class="cart"><span style="color: rgb(255, 0, 221);"
+											class="fa fa-facebook"></span></a></li>
 							<li class="nav-item">
-								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+								<button class="search"><span style="color: white;" class="lnr lnr-magnifier"
+										id="search"></span></button>
 							</li>
 						</ul>
 					</div>
@@ -49,7 +60,7 @@
 		<div class="search_input" id="search_input_box">
 			<div class="container">
 				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="Site İçi Arama Yapım">
+					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
 					<button type="submit" class="btn"></button>
 					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
 				</form>
@@ -59,4 +70,5 @@
 	<!-- End Header Area -->
 
 </body>
+
 </html>

@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from . models import PVCKAPI
 
 # Create your views here.
 
@@ -9,4 +10,15 @@ def Product(request):
 
 
 def ProductDetail(request):
-    return render(request,'Product/ProductDetail.html')
+    sorguseti =  PVCKAPI.objects.all()
+   
+    
+
+    
+    context = {
+        
+        'test':sorguseti
+    }
+    
+   
+    return render(request,'Product/ProductDetail.html',context)
